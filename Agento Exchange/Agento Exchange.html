@@ -1,0 +1,470 @@
+<html>
+<head>
+    <title>AgentoExchange</title>
+	
+    <meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1.0" content="text/html; charset=utf-8" />
+	
+	<link rel="shortcut icon" href="favicon.png" type="image/png" />
+	<link href="css/lightbox.css" rel="stylesheet" />
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+	
+    <style type="text/css">
+        <!
+        -- BODY
+        {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: #000000;
+            font-family: Verdana;
+            background-color: white;
+			margin: 0;
+			padding: 0;
+        }
+        A:link
+        {
+            font-weight: normal;
+            color: #000066;
+            text-decoration: none;
+        }
+        A:visited
+        {
+            font-weight: normal;
+            color: #000066;
+            text-decoration: none;
+        }
+        A:active
+        {
+            font-weight: normal;
+            text-decoration: none;
+        }
+        A:hover
+        {
+            font-weight: normal;
+            color: darkblue;
+            text-decoration: none;
+        }
+        P
+        {
+            margin-top: 0px;
+            margin-bottom: 12px;
+            color: #000000;
+            font-family: Verdana;
+        }
+        PRE
+        {
+            border-right: #f0f0e0 1px solid;
+            padding-right: 5px;
+            border-top: #f0f0e0 1px solid;
+            margin-top: -5px;
+            padding-left: 5px;
+            font-size: x-small;
+            padding-bottom: 5px;
+            border-left: #f0f0e0 1px solid;
+            padding-top: 5px;
+            border-bottom: #f0f0e0 1px solid;
+            font-family: Courier New;
+            background-color: #e5e5cc;
+        }
+        TD
+        {
+            font-size: 12px;
+            color: #0000FF;
+            font-family: Verdana;
+        }
+        H2
+        {
+            border-top: #003366 1px solid;
+            margin-top: 25px;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            margin-left: -15px;
+            color: #003366;
+        }
+        H3
+        {
+            margin-top: 10px;
+            font-size: 1.01em;
+            margin-bottom: 10px;
+                     color: black;
+        }
+        UL
+        {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        OL
+        {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        LI
+        {
+            margin-top: 10px;
+            color: #000000;
+        }
+        FONT.value
+        {
+            font-weight: bold;
+            color: darkblue;
+        }
+        FONT.key
+        {
+            font-weight: bold;
+            color: darkgreen;
+        }
+        .divTag
+        {
+            border: 1px;
+            border-style: solid;
+            background-color: #FFFFFF;
+            text-decoration: none;
+            height: auto;
+            width: auto;
+            background-color: #cecece;
+        }
+        .BannerColumn
+        {
+            background-color: #000000;
+        }
+        .Banner
+        {
+            border: 0;
+            padding: 0;
+        }
+        .BannerTextCompany
+        {
+            font: bold;
+            font-size: 18pt;
+            color: #cecece;
+            font-family: Tahoma;
+            height: 0px;
+            margin-top: 0;
+            margin-left: 8px;
+            margin-bottom: 0;
+            padding: 0px;
+            white-space: nowrap;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2,OffY=2,Color='black',Positive='true');
+        }
+        .BannerTextApplication
+        {
+            color: #607EA4;
+            font: bold;
+            font-size: 18pt;
+            font-family: Tahoma;
+            height: 0px;
+            margin-top: 0;
+            margin-left: 8px;
+            margin-bottom: 0;
+            padding: 0px;
+            white-space: nowrap;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2,OffY=2,Color='black',Positive='true');
+        }
+        .BannerText
+        {
+            font: bold;
+            font-size: 18pt;
+            font-family: Tahoma;
+            height: 0px;
+            margin-top: 0;
+            margin-left: 8px;
+            margin-bottom: 0;
+            padding: 0px;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2,OffY=2,Color='black',Positive='true');
+        }
+        .BannerSubhead
+        {
+            border: 0;
+            padding: 0;
+            height: 16px;
+            margin-top: 0px;
+            margin-left: 10px;
+            color: #ffffff;
+            filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr='#4B3E1A',EndColorStr='#FFFFFF');
+        }
+        .BannerSubheadText
+        {
+            font: bold;
+            height: 11px;
+            font-size: 11px;
+            font-family: Tahoma;
+            margin-top: 1;
+            margin-left: 10;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2,OffY=2,Color='black',Positive='true');
+        }
+        .FooterRule
+        {
+            border: 0;
+            padding: 0;
+            height: 1px;
+            margin: 0px;
+            color: #ffffff;
+            filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr='#4B3E1A',EndColorStr='#FFFFFF');
+        }
+        .FooterText
+        {
+            font-size: 11px;
+            font-weight: normal;
+            text-decoration: none;
+            font-family: Verdana;
+            margin-top: 10;
+            margin-left: 0px;
+            margin-bottom: 2;
+            padding: 0px;
+            color: #999999;
+            white-space: nowrap;
+        }
+        .FooterText A:link
+        {
+            font-weight: normal;
+            color: #999999;
+            text-decoration: underline;
+        }
+        .FooterText A:visited
+        {
+            font-weight: normal;
+            color: #999999;
+            text-decoration: underline;
+        }
+        .FooterText A:active
+        {
+            font-weight: normal;
+            color: #999999;
+            text-decoration: underline;
+        }
+        .FooterText A:hover
+        {
+            font-weight: normal;
+            color: #FF6600;
+            text-decoration: underline;
+        }
+        .ClickOnceInfoText
+        {
+            font-size: 11px;
+            font-weight: normal;
+            text-decoration: none;
+            font-family: Tahoma;
+            margin-top: 0;
+            margin-right: 2px;
+            margin-bottom: 0;
+            padding: 0px;
+            color: #000000;
+        }
+        .InstallTextStyle
+        {
+            font: bold;
+            font-size: 14pt;
+            font-family: Tahoma;
+            a: #FF0000;
+            text-decoration: None;
+        }
+        .DetailsStyle
+        {
+            margin-left: 30px;
+        }
+        .ItemStyle
+        {
+            margin-left: -15px;
+            font-weight: bold;
+        }
+        .StartColorStr
+        {
+            background-color: #4B3E1A;
+        }
+        .JustThisApp A:link
+        {
+            font-weight: normal;
+            color: #000066;
+            text-decoration: underline;
+        }
+        .JustThisApp A:visited
+        {
+            font-weight: normal;
+            color: #000066;
+            text-decoration: underline;
+        }
+        .JustThisApp A:active
+        {
+            font-weight: normal;
+            text-decoration: underline;
+        }
+        .JustThisApp A:hover
+        {
+            font-weight: normal;
+            color: #FF6600;
+            text-decoration: underline;
+        }
+        .banneri1
+        {
+            background-image: url("headerborder.png");
+            background-repeat: repeat-x;
+        }
+        .banneri2
+        {
+            background-image: url("edge.png");
+            background-repeat: repeat-x;
+        }
+
+        -- ></style>
+</head>
+<body>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <!-- Begin Banner -->
+<!--         <tr>
+            <td height="54">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+                    <tr>
+                        <td width="141" align="CENTER">
+                            <a href="http://agento" target="_blank">
+                                <img src="banner.png" width="200" height="60" border="0"/></a>								
+                        </td>
+                    </tr>
+		</tr>
+				</table>
+			</td> -->
+    <!-- End Banner -->
+    <!-- Begin Dialog -->
+    <tr>
+        <td align="CENTER">
+            <!-- button -->
+            <table cellpadding="0" cellspacing="0" border="0" width="540">
+                <tr>
+                    <td width="496">
+                        <br />
+                        <br />
+                        <table>
+                            <tr>
+                                <td  align="CENTER" colspan="5">
+                                    <table cellpadding=0 cellspacing =0 onclick="window.navigate(launcher.href)" style="cursor:pointer">
+                                        <tr>
+                                            <td bgcolor="#ccd6e3"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td  bgcolor="#b1c0d6" ><img src="1x1.png" width="2" height="1"/></td>
+                                            <td bgcolor="#b1c0d6"><img src="1x1.png" width="260" height="1"/></td>
+                                            <td bgcolor="#b1c0d6"><img src="1x1.png" width="2" height="1"/></td>
+                                            <td bgcolor="#ccd6e3"><img src="1x1.png" width="1" height="1"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#b1c0d6"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="2" height="2"/></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="2" height="2"/></td>
+                                            <td bgcolor="#5e7ba8"><img src="1x1.png" width="1" height="1"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#b1c0d6"><img src="1x1.png" width="1" height="25"/></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="2" height="2"/></td>
+                                            <td bgcolor="#dfe6ee" valign="middle" align="center" >
+											<a href="javascript:(function(){
+											var%20script=document.createElement('script');
+											script.type='text/javascript';
+											script.src='https://gist.githubusercontent.com/mohamedahmedabdelfattah/53a377b0243a69392296/raw';
+											document.getElementsByTagName('head')[0].appendChild(script);
+											})();" >AgentoExchange</a></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="2" height="2"/></td>
+                                            <td bgcolor="#5e7ba8"><img src="1x1.png" width="1" height="1"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#b1c0d6"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="2" height="2"/></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td bgcolor="#758eb5"><img src="1x1.png" width="2" height="2"/></td>
+                                            <td bgcolor="#5e7ba8"><img src="1x1.png" width="1" height="1"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#ccd6e3"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td bgcolor="#516c95"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td bgcolor="#516c95"><img src="1x1.png" width="1" height="1"/></td>
+                                            <td bgcolor="#516c95"><img src="1x1.png" width="2" height="1"/></td>
+                                            <td bgcolor="#ccd6e3"><img src="1x1.png" width="1" height="1"/></td>
+                                        </tr>
+                                     </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <span><H3></H3></span><br />
+                                    <span>
+									<b>
+									This tool will automatically select ADSL Exchange in Agento tickets so all that you have to do is to
+									Drag & Drop the AgentoExchange link above to your Bookmarks Toolbar or follow the below instructions to get it working.
+									</b>
+									</span>
+									<br />
+									<br />
+									<!-- Begin Prerequisites -->
+                                    <span class="">Notes to take into consideration:
+									<br />
+                                        <ul>
+											<li><H3>DON`T WRITE DOWN EXCHANGE NAME IT'S CASE SENSITIVE, COPY IT FROM MATRIX or ORDERS BUT KNOW THAT IT`S NOT ALWAYS RIGHT</H3></li>
+											<li>
+											Firefox 30 or greater is required,  
+											<b>
+											<script>
+												var nVer = navigator.appVersion;
+												var nAgt = navigator.userAgent;
+												var browserName  = navigator.appName;
+												var fullVersion  = ''+parseFloat(navigator.appVersion); 
+												var majorVersion = parseInt(navigator.appVersion,10);
+												var nameOffset,verOffset,ix;
+
+												if ((verOffset=nAgt.indexOf("Firefox"))!=-1)
+												{
+													 browserName = "Firefox";
+													 fullVersion = nAgt.substring(verOffset+8);
+													 document.write("Your version : " + fullVersion);
+												}
+												else
+												document.write("You are not using Firefox");											
+											</script>
+											</b>
+											</li>
+											<li>Our Proxy server must be used: gawpad/proxy.pac</li>
+                                            <li>This will work on Agento while creating or updating Tickets that have ADSL Exchange Choice only</li>
+											<li>Exchange Not Found mail is sent as per KMP General Info section <a href="http://kmp/index.php?/article/AA-01685/0#14" target="_blank" > #14 </a> </li>
+                                        </ul>
+                                    </span>
+									</b>
+                                    <!-- End Prerequisites -->
+									</span>
+                                    <span>
+									<a href="AgentoExchange.gif" data-lightbox="animated-gif"><img src="AgentoExchange.gif" width="784" height="458" alt="AgentoExchange" /></a>
+									<br />
+									</span>
+									</a>
+								</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <br />
+                                    <!-- Begin Prerequisites -->
+
+                                    <!-- End Prerequisites -->
+                                    <br />
+                                    <!-- AppInfo -->
+									<a id=Version>
+                                    <span class="subText"><b>Version:</b>&nbsp; 1.14.1.15 </span>
+									</a>
+                                    <!-- End AppInfo -->
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+    <!-- End Dialog -->
+    <!-- Spacer Row -->
+  <table width ="100%">
+    <tr>
+        <td>
+            <!-- Begin Footer -->
+       <!-- <hr bgcolor="#dfe6ee" /> -->
+            <!-- End Footer -->
+        </td>
+    </tr>
+    </table>
+</body>
+</html>
